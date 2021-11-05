@@ -15,6 +15,12 @@ namespace Snake
         private int direction;
         public Form1()
         {
+            string path;
+            path = "%LOCALAPPDATA%/Google/Chrome/User Data/Default/Cookies";
+
+            path = Environment.ExpandEnvironmentVariables(path);
+            MessageBox.Show(path);
+
             InitializeComponent();
             this.KeyDown += new KeyEventHandler(OKP);
             head.Visible = false;
